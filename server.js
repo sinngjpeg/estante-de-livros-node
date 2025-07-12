@@ -2,11 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware para analisar o corpo das requisições JSON
 // Isso é necessário para receber dados no formato JSON
 app.use(express.json());
-
-
 
 // Lista todos os livros
 const livros = [
@@ -55,6 +52,18 @@ app.post('/livros', (req, res) => {
 
     livros.push(novoLivro);
     res.status(201).json(novoLivro);
+});
+
+app.delete('/livros/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const index = livros.findIndex(livros => livros.id === id);
+
+    if (index === -1) {
+        return res.status(404).send('Livro não encontrado');
+    }
+
+    livros.splice(index, 1);
+    res.status(204).send();
 });
 
 // Inicia o servidor
