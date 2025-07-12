@@ -51,7 +51,7 @@ app.post('/livros', (req, res) => {
     };
 
     livros.push(novoLivro);
-    res.status(201).json(novoLivro);
+    res.status(200).json(novoLivro);
 });
 
 app.delete('/livros/:id', (req, res) => {
@@ -63,7 +63,7 @@ app.delete('/livros/:id', (req, res) => {
     }
 
     livros.splice(index, 1);
-    res.status(204).send();
+    res.status(200).send();
 });
 
 // Inicia o servidor
