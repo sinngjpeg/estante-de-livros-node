@@ -14,6 +14,10 @@ async function getBookById(id) {
   return await bookRepository.getBookById(id);
 }
 
+async function updateBookById(id, bookData) {
+  return await bookRepository.updateBookById(id, bookData);
+}
+
 async function deleteBookById(id) {
   return await bookRepository.deleteBookById(id);
 }

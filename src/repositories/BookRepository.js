@@ -13,6 +13,13 @@ async function createBook(bookData) {
   return await book.save();
 }
 
+async function updateBookById(id, bookData) {
+  return await Book.findOneAndUpdate(
+    { id: Number(id) },
+    bookData, { new: true });
+}
+
+
 async function deleteBookById(id) {
   return await Book.findOneAndDelete(id);
 }

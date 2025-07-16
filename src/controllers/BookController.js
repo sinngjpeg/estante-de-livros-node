@@ -23,9 +23,17 @@ async function getBookById(req, res) {
   res.json(book);
 }
 
+async function updateBookById(req, res) {
+  const book = await bookService.updateBookById(req.params.id, req.body);
+  if (!book) {
+    return res.status(statusCode.StatusCode.NOT_FOUND).json({ message: 'Livro não encontrado' });
+  }
+  res.json(book);
+}
+
 async function deleteBookById(req, res) {
   await bookService.deleteBookById(req.params.id);
   res.status(statusCode.StatusCode.NO_CONTENT).send();
 }
 
-module.exports = { getAll: getAllBooks, create: createBook, getById: getBookById, remove: deleteBookById };
+module.exports = { getAllBooks, createBook, getBookById, updateBookById, deleteBookById };
