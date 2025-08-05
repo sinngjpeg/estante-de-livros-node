@@ -24,7 +24,7 @@
 			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
 			"com.tldraw.shape.frame": 1,
-			"com.tldraw.shape.arrow": 6,
+			"com.tldraw.shape.arrow": 7,
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
 			"com.tldraw.shape.image": 5,
@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 834.201376450929,
-			"y": 741.5418955653086,
-			"lastActivityTimestamp": 1752690909292,
+			"x": -11.906764039072769,
+			"y": 372.59530995376304,
+			"lastActivityTimestamp": 1754425762815,
 			"meta": {}
 		},
 		{
@@ -244,9 +244,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -116.25799386669202,
-			"y": 275.1430287653895,
-			"z": 0.6226117697345765,
+			"x": 64.31752097371881,
+			"y": 78.13719968419298,
+			"z": 0.8586023677565477,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -348,10 +348,17 @@
 				},
 				"arrowheadStart": "none",
 				"arrowheadEnd": "arrow",
-				"text": "",
 				"labelPosition": 0.5,
 				"font": "draw",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
 			"index": "a497M",
@@ -438,9 +445,7 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:acfTYpgF7QXulqLcIEEao"
-			],
+			"selectedShapeIds": [],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
@@ -517,10 +522,17 @@
 				},
 				"arrowheadStart": "none",
 				"arrowheadEnd": "arrow",
-				"text": "",
 				"labelPosition": 0.5,
 				"font": "draw",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
 			"index": "a37J3",
@@ -1307,16 +1319,11 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:font": "sans",
-				"tldraw:color": "light-green",
-				"tldraw:fill": "semi",
-				"tldraw:geo": "rectangle"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -1326,7 +1333,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1390,
+				"w": 1920,
 				"h": 918
 			},
 			"insets": [
@@ -1344,7 +1351,7 @@
 			"isFocused": true,
 			"devicePixelRatio": 1,
 			"isCoarsePointer": false,
-			"isHoveringCanvas": true,
+			"isHoveringCanvas": false,
 			"openMenus": [],
 			"isChangingStyle": false,
 			"isReadonly": false,
