@@ -1,5 +1,5 @@
-const bookService = require('../services/BookService.js');
-const statusCode = require('../utils/StatusCode.js');
+const bookService = require('../../services/BookService.js');
+const statusCode = require('../../utils/StatusCode.js');
 
 async function getAllBooks(request, response) {
   const books = await bookService.getAllBooks();

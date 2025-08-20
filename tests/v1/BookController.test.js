@@ -1,6 +1,6 @@
-const bookController = require('../src/controllers/BookController');
+const bookController = require('../../src/controllers/BookController');
 const httpMocks = require('node-mocks-http');
-const bookService = require('../src/services/BookService');
+const bookService = require('../../src/services/BookService');
 
 // Usa o mock manual criado em __mocks__
 jest.mock('../src/services/BookService');

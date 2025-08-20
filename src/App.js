@@ -11,8 +11,8 @@ const swaggerDocument = YAML.load(path.join(__dirname, '..', 'docs', 'swagger.ya
 function createServer() {
     const app = express();
     app.use(cors({
-        origin: 'http://localhost:5173', // libera só seu frontend
-        methods: ['GET', 'POST', 'PUT', 'DELETE'], // métodos permitidos
+        origin: 'http://localhost:5173',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true, // se precisar enviar cookies
     }));
     app.use(express.json());
