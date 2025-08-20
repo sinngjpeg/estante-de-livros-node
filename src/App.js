@@ -1,11 +1,18 @@
 const express = require('express');
 const router = require('./routers/Routers.js');
+const swaggerUi = require('swagger-ui-express'); // importar swaggerUi aqui
+const YAML = require('yamljs');
+const path = require('path');
+
+
+const swaggerDocument = YAML.load(path.join(__dirname, '..', 'docs', 'swagger.yaml'));
 
 
 function createServer() {
     const app = express();
     app.use(express.json());
     app.use("/api", router)
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
     return app;
 }
